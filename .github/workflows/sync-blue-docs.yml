@@ -22,5 +22,5 @@ jobs:
 
     - name: Deploy to S3
       run: |
-        aws s3 sync . s3://blue-docs/test/ --delete --region us-east-1
+        aws s3 sync . s3://blue-docs/test/ --delete --region us-east-1 --exclude ".git/*" --exclude ".github/*"
         
